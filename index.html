@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Vite App</title>
+  </head>
+  <body
+    class="grid place-content-center content-center text-center h-screen bg-cover bg-center bg-black"
+  >
+    
+    <main
+      class="p-6 md:p-10 grid gap-4 rounded-lg text-zinc-100 accent-teal-500 bg-black/[.2] shadow-md shadow-fuchsia-50"
+    > 
+      <h1 class="text-4xl font-bold">
+        Password Generator
+      </h1>
+
+      <div>
+        <input type="text"
+          class="bg-white rounded-md w-full text-black px-2 focus:border-none focus:outline-none py-1"
+          id="Password"
+          readonly
+        >
+        <meter id="strength" class="w-full" min="0" max="100" low="30" high="75" optimum="100"></meter>
+      </div>
+
+      <div 
+        class="flex justify-between items-center gap-3 border-t-2 pt-3"
+      >
+        <label for="length">Characters</label>
+        <input type="range" min="8" max="30" value="15" name="length" id="length" class="bg-zinc-50 flex-1">
+        <p 
+          class="bg-zinc-100 w-8 h-8 text-zinc-800 grid place-items-center"
+        >
+          <span id="lengthText" class="cursor-default">15</span>
+        </p>
+      </div>
+
+      <div 
+        class="flex justify-between items-center gap-3 border-t-2 pt-3"
+      >
+        <label for="includeNumbers">includeNumbers</label>
+        <input type="checkbox" min="8" max="30" value="15" name="includeNumbers" id="includeNumbers" class="w-8 h-8 cursor-pointer">
+      </div>
+
+      <div 
+        class="flex justify-between items-center gap-3 border-t-2 pt-3"
+      >
+        <label for="includeSymbols">include Symbols</label>
+        <input type="checkbox" min="8" max="30" value="15" name="includeSymbols" id="includeSymbols" class="w-8 h-8 cursor-pointer">
+      </div>
+
+      <button id="generate" class=" mt-2 w-1/2 mx-auto bg-cyan-400 rounded-md py-1 transition-all hover:bg-cyan-600">
+        generate
+      </button>
+
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
